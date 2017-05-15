@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fmiModelDescription modelName="OscillatorD2F" fmiVersion="2.0" guid="{c72b3e9d-f35a-4112-840e-726967524b7e}">
+    <CoSimulation
+        modelIdentifier="OscillatorD2F"
+        canHandleVariableCommunicationStepSize="true"
+        canInterpolateInputs="true"/>
+   <ModelVariables>
+      <ScalarVariable causality="input" name="xOther" valueReference="0">
+         <Real start="0"/>
+      </ScalarVariable>
+      <ScalarVariable causality="input" name="vOther" valueReference="1">
+         <Real start="0"/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="FThis" valueReference="2">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="m" valueReference="3" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="c" valueReference="4" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="d" valueReference="5" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="ck" valueReference="6" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="dk" valueReference="7" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="x0" valueReference="8" variability="fixed">
+         <Real start="0.1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="v0" valueReference="9" variability="fixed">
+         <Real start="0.1"/>
+      </ScalarVariable>
+   </ModelVariables>
+   <ModelStructure/>
+</fmiModelDescription>

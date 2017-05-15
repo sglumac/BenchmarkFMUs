@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Instances>
+        <Instance instanceName="OscillatorD2F">
+            <Archive archiveName="OscillatorD2F.fmu"/>
+            <Parameters>
+                <Parameter name="m" value="10."/>
+                <Parameter name="c" value="1."/>
+                <Parameter name="d" value="1."/>
+                <Parameter name="ck" value="1."/>
+                <Parameter name="dk" value="2."/>
+                <Parameter name="x0" value="0.1"/>
+                <Parameter name="v0" value="0.1"/>
+            </Parameters>
+        </Instance>
+        <Instance instanceName="OscillatorF2D">
+            <Archive archiveName="OscillatorF2D.fmu"/>
+            <Parameters>
+                <Parameter name="m" value="10."/>
+                <Parameter name="c" value="1."/>
+                <Parameter name="d" value="2."/>
+                <Parameter name="x0" value="0.2"/>
+                <Parameter name="v0" value="0.1"/>
+            </Parameters>
+        </Instance>
+    </Instances>
+    <Connections>
+        <Connection>
+            <Source instanceName="OscillatorD2F" outputName="FThis"/>
+            <Destination instanceName="OscillatorF2D" inputName="FOther"/>
+        </Connection>
+        <Connection>
+            <Source instanceName="OscillatorF2D" outputName="xThis"/>
+            <Destination instanceName="OscillatorD2F" inputName="xOther"/>
+        </Connection>
+        <Connection>
+            <Source instanceName="OscillatorF2D" outputName="vThis"/>
+            <Destination instanceName="OscillatorD2F" inputName="vOther"/>
+        </Connection>
+    </Connections>
+</Configuration>

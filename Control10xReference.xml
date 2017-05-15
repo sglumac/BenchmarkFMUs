@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Instances>
+        <Instance instanceName="ControlLoop10x">
+            <Archive archiveName="ControlLoopPIxPT1.fmu"/>
+            <Parameters>
+                <Parameter name="KP" value="10."/>
+                <Parameter name="KI" value="10."/>
+                <Parameter name="K" value="1."/>
+                <Parameter name="T" value="1."/>
+                <Parameter name="r" value="1."/>
+                <Parameter name="x0_PI" value="0."/>
+                <Parameter name="x0_PT1" value="0."/>
+            </Parameters>
+        </Instance>
+    </Instances>
+</Configuration>

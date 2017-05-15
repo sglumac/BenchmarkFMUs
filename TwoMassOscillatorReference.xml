@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Instances>
+        <Instance instanceName="TwoMassOscillator">
+            <Archive archiveName="TwoMassOscillator.fmu"/>
+            <Parameters>
+                <Parameter name="m_1" value="10."/>
+                <Parameter name="c_1" value="1."/>
+                <Parameter name="d_1" value="1."/>
+                <Parameter name="ck" value="1."/>
+                <Parameter name="dk" value="2."/>
+                <Parameter name="x0_1" value="0.1"/>
+                <Parameter name="v0_1" value="0.1"/>
+                <Parameter name="m_2" value="10."/>
+                <Parameter name="c_2" value="1."/>
+                <Parameter name="d_2" value="2."/>
+                <Parameter name="x0_2" value="0.2"/>
+                <Parameter name="v0_2" value="0.1"/>
+            </Parameters>
+        </Instance>
+    </Instances>
+</Configuration>

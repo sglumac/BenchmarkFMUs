@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Instances>
+        <Instance instanceName="Oscillator1">
+            <Archive archiveName="OscillatorD2D.fmu"/>
+            <Parameters>
+                <Parameter name="m" value="10."/>
+                <Parameter name="c" value="1."/>
+                <Parameter name="d" value="1."/>
+                <Parameter name="ck" value="1."/>
+                <Parameter name="dk" value="2."/>
+                <Parameter name="x0" value="0.1"/>
+                <Parameter name="v0" value="0.1"/>
+            </Parameters>
+        </Instance>
+        <Instance instanceName="Oscillator2">
+            <Archive archiveName="OscillatorD2D.fmu"/>
+            <Parameters>
+                <Parameter name="m" value="10."/>
+                <Parameter name="c" value="1."/>
+                <Parameter name="d" value="2."/>
+                <Parameter name="ck" value="1."/>
+                <Parameter name="dk" value="2."/>
+                <Parameter name="x0" value="0.2"/>
+                <Parameter name="v0" value="0.1"/>
+            </Parameters>
+        </Instance>
+    </Instances>
+    <Connections>
+        <Connection>
+            <Source instanceName="Oscillator1" outputName="xThis"/>
+            <Destination instanceName="Oscillator2" inputName="xOther"/>
+        </Connection>
+        <Connection>
+            <Source instanceName="Oscillator1" outputName="vThis"/>
+            <Destination instanceName="Oscillator2" inputName="vOther"/>
+        </Connection>
+        <Connection>
+            <Source instanceName="Oscillator2" outputName="xThis"/>
+            <Destination instanceName="Oscillator1" inputName="xOther"/>
+        </Connection>
+        <Connection>
+            <Source instanceName="Oscillator2" outputName="vThis"/>
+            <Destination instanceName="Oscillator1" inputName="vOther"/>
+        </Connection>
+    </Connections>
+</Configuration>

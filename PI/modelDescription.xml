@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fmiModelDescription modelName="PI" fmiVersion="2.0" guid="{e523d964-f319-458b-8fd6-dc86175a2146}">
+    <CoSimulation
+        modelIdentifier="PI"
+        canHandleVariableCommunicationStepSize="true"
+        canInterpolateInputs="true"/>
+   <ModelVariables>
+      <ScalarVariable causality="input" name="u" valueReference="0">
+         <Real start="0"/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="y" valueReference="1">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="KP" valueReference="2" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="KI" valueReference="3" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="r" valueReference="4" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="x0" valueReference="5" variability="fixed">
+         <Real start="0"/>
+      </ScalarVariable>
+   </ModelVariables>
+   <ModelStructure/>
+</fmiModelDescription>

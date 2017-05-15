@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Instances>
+        <Instance instanceName="PT1">
+            <Archive archiveName="PT1.fmu"/>
+            <Parameters>
+                <Parameter name="K" value="1."/>
+                <Parameter name="T" value="1."/>
+                <Parameter name="x0" value="0."/>
+            </Parameters>
+        </Instance>
+        <Instance instanceName="PI">
+            <Archive archiveName="PI.fmu"/>
+            <Parameters>
+                <Parameter name="KP" value="10."/>
+                <Parameter name="KI" value="10."/>
+                <Parameter name="x0" value="0."/>
+                <Parameter name="r" value="1."/>
+            </Parameters>
+        </Instance>
+    </Instances>
+    <Connections>
+        <Connection>
+            <Source instanceName="PT1" outputName="y"/>
+            <Destination instanceName="PI" inputName="u"/>
+        </Connection>
+        <Connection>
+            <Source instanceName="PI" outputName="y"/>
+            <Destination instanceName="PT1" inputName="u"/>
+        </Connection>
+    </Connections>
+</Configuration>

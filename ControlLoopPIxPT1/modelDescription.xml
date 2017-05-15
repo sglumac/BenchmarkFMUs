@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fmiModelDescription modelName="ControlLoopPIxPT1" fmiVersion="2.0" guid="{1e5fd043-f3cf-4109-8698-35c8b165ef48}">
+    <CoSimulation
+        modelIdentifier="ControlLoopPIxPT1"
+        canHandleVariableCommunicationStepSize="true"
+        canInterpolateInputs="true"/>
+   <ModelVariables>
+      <ScalarVariable causality="output" name="u" valueReference="0">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="y" valueReference="1">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="KP" valueReference="2" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="KI" valueReference="3" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="K" valueReference="4" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="T" valueReference="5" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="r" valueReference="6" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="x0_PI" valueReference="7" variability="fixed">
+         <Real start="0"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="x0_PT1" valueReference="8" variability="fixed">
+         <Real start="0"/>
+      </ScalarVariable>
+   </ModelVariables>
+   <ModelStructure/>
+</fmiModelDescription>

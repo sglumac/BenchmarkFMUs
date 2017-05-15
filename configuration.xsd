@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Root Element -->
+    <xs:element name="Configuration" type="ConfigurationType"/>
+
+    <!-- Type Definitions -->
+    <xs:complexType name="ConfigurationType">
+        <xs:sequence>
+            <xs:element name="Instances" type="InstancesType"/>
+            <xs:element name="Connections" type="ConnectionsType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="InstancesType">
+        <xs:sequence>
+            <xs:element name="Instance" type="InstanceType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="InstanceType">
+        <xs:sequence>
+            <xs:element name="Archive" type="ArchiveType"/>
+            <xs:element name="Parameters" type="ParametersType"/>
+        </xs:sequence>
+        <xs:attribute name="instanceName" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ArchiveType">
+        <xs:attribute name="archiveName" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ParametersType">
+        <xs:sequence>
+            <xs:element name="Parameter" type="ParameterType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ParameterType">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="value" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ConnectionsType">
+        <xs:sequence>
+            <xs:element name="Connection" type="ConnectionType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ConnectionType">
+        <xs:sequence>
+            <xs:element name="Source" type="SourceType"/>
+            <xs:element name="Destination" type="DestinationType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="SourceType">
+        <xs:attribute name="instanceName" type="xs:string" use="required"/>
+        <xs:attribute name="outputName" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="DestinationType">
+        <xs:attribute name="instanceName" type="xs:string" use="required"/>
+        <xs:attribute name="inputName" type="xs:string" use="required"/>
+    </xs:complexType>
+
+</xs:schema>
+
