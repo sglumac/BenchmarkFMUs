@@ -4,6 +4,8 @@ Configurations of components compliant to FMI 2.0 specification
 ## Installation
 
 Please, download and install Sundials (https://computation.llnl.gov/projects/sundials)
+Tested with Sundials 2.7.0, does not compile with Sundials 3.x.
+
 ### Windows
 ```bat
 mkdir X:\path\to\build\folder
