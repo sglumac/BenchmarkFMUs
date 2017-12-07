@@ -59,7 +59,7 @@ fmi2Status FinishInitialization(fmi2Component component)
 
 fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
 {
-    _y = _t < _tStep ? _y0 : _yEnd;
+    _y = _t + h < _tStep ? _y0 : _yEnd;
     logf(fmi2OK, "y = %lf, y0 = %lf, yEnd = %lf, _tStep = %lf", _y, _y0, _yEnd, _tStep);
     return fmi2OK;
 }
