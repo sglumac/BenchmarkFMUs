@@ -15,8 +15,8 @@
                 <Parameter name="K" value="1."/>
             </Parameters>
         </Instance>
-        <Instance instanceName="Substraction">
-            <Archive archiveName="Substraction.fmu"/>
+        <Instance instanceName="Subtraction">
+            <Archive archiveName="Subtraction.fmu"/>
         </Instance>
     </Instances>
     <Connections>
@@ -26,11 +26,11 @@
         </Connection>
         <Connection>
             <Source instanceName="Gain" outputName="y"/>
-            <Destination instanceName="Substraction" inputName="u1"/>
+            <Destination instanceName="Subtraction" inputName="u1"/>
         </Connection>
         <Connection>
             <Source instanceName="Step" outputName="y"/>
-            <Destination instanceName="Substraction" inputName="u2"/>
+            <Destination instanceName="Subtraction" inputName="u2"/>
         </Connection>
     </Connections>
 </Configuration>

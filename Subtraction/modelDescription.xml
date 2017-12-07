@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fmiModelDescription modelName="Substraction" fmiVersion="2.0" guid="{d7388eeb-70d8-46bf-a93b-e0fa5209df1b}">
+<fmiModelDescription modelName="Subtraction" fmiVersion="2.0" guid="{d7388eeb-70d8-46bf-a93b-e0fa5209df1b}">
     <CoSimulation
-        modelIdentifier="Substraction"
+        modelIdentifier="Subtraction"
         canHandleVariableCommunicationStepSize="true"
         canInterpolateInputs="true"/>
    <ModelVariables>
