@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fmiModelDescription modelName="Gain" fmiVersion="2.0" guid="{a0f07710-a502-4c14-a85b-4114f6c3c629}" version="1.0.0.0">
+    <CoSimulation
+        modelIdentifier="Gain"
+        canHandleVariableCommunicationStepSize="true"
+        canInterpolateInputs="true"/>
+   <ModelVariables>
+      <ScalarVariable causality="input" name="u" valueReference="0">
+         <Real start="0"/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="y" valueReference="1">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="K" valueReference="2" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+   </ModelVariables>
+   <ModelStructure/>
+</fmiModelDescription>

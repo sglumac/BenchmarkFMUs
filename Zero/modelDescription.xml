@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fmiModelDescription modelName="Zero" fmiVersion="2.0" guid="{80824c22-42a0-4f5b-9a3a-7d0a2f9311dc}">
+    <CoSimulation
+        modelIdentifier="Zero"
+        canHandleVariableCommunicationStepSize="true"/>
+   <ModelVariables>
+      <ScalarVariable causality="output" name="y" valueReference="0">
+         <Real/>
+      </ScalarVariable>
+   </ModelVariables>
+   <ModelStructure/>
+</fmiModelDescription>

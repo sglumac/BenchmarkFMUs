@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Instances>
+        <Instance instanceName="Step">
+            <Archive archiveName="Step.fmu"/>
+            <Parameters>
+                <Parameter name="y0" value="0."/>
+                <Parameter name="yEnd" value="1."/>
+                <Parameter name="tStep" value="1."/>
+            </Parameters>
+        </Instance>
+        <Instance instanceName="Gain">
+            <Archive archiveName="Gain.fmu"/>
+            <Parameters>
+                <Parameter name="K" value="1."/>
+            </Parameters>
+        </Instance>
+        <Instance instanceName="Substraction">
+            <Archive archiveName="Substraction.fmu"/>
+        </Instance>
+    </Instances>
+    <Connections>
+        <Connection>
+            <Source instanceName="Step" outputName="y"/>
+            <Destination instanceName="Gain" inputName="u"/>
+        </Connection>
+        <Connection>
+            <Source instanceName="Gain" outputName="y"/>
+            <Destination instanceName="Substraction" inputName="u1"/>
+        </Connection>
+        <Connection>
+            <Source instanceName="Step" outputName="y"/>
+            <Destination instanceName="Substraction" inputName="u2"/>
+        </Connection>
+    </Connections>
+</Configuration>

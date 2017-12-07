@@ -21,7 +21,7 @@
     <xs:complexType name="InstanceType">
         <xs:sequence>
             <xs:element name="Archive" type="ArchiveType"/>
-            <xs:element name="Parameters" type="ParametersType"/>
+            <xs:element name="Parameters" type="ParametersType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
         <xs:attribute name="instanceName" type="xs:string" use="required"/>
     </xs:complexType>
