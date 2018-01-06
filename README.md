@@ -11,6 +11,7 @@ Tested with Sundials 2.7.0, does not compile with Sundials 3.x.
 mkdir X:\path\to\build\folder
 cd X:\path\to\build\folder
 cmake -D CMAKE_INSTALL_PREFIX="X:\target\folder" -D FMI2SPECIFICATION="X:\folder\with\fmi2\headers" -D SUNDIALS="X:\path\to\sundials" X:\path\to\repository\root
+rem For 64 bit build with Visual Studio 2017 add: -G "Visual Studio 15 2017 Win64"
 cmake --build . --target install
 ```
 ### Linux
