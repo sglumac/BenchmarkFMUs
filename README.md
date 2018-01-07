@@ -34,3 +34,6 @@ cmake --build . --target install
 * ControlI.xml
 * ControlIReference.xml (analytically solved reference)
 
+### Step Subtraction
+* StepSubtraction.xml
+* StepSubtractionReference.xml (analytically solved reference)
