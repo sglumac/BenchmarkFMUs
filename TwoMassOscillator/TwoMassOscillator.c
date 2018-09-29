@@ -13,12 +13,12 @@
 #include <sundials/sundials_types.h>
 
 #define MAX_INPUT_DERIVATIVE_ORDER 0
-#define NUMBER_OF_REALS 16
+#define NUMBER_OF_REALS 17
 #define NUMBER_OF_INTEGERS 0
 #define NUMBER_OF_BOOLEANS 0
 #define NUMBER_OF_STRINGS 0
 
-const fmi2ValueReference ivrs[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+const fmi2ValueReference ivrs[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 
 #define _x_1 r(0,0)
 #define _v_1 r(1,0)
@@ -42,6 +42,8 @@ const fmi2ValueReference ivrs[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
 
 #define _ck r(14,0)
 #define _dk r(15,0)
+
+#define _F_1 r(16,0)
 
 #define NUMBER_OF_STATES 4
 
@@ -185,5 +187,6 @@ fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
 
 fmi2Status OutputUpdate(fmi2Component component)
 {
+	_F_1 = _ck * _x_1 + _dk * _v_1 - _ck * _x_2 - _dk * _v_2;
 	return fmi2OK;
 }

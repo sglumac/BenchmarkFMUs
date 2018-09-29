@@ -11,6 +11,9 @@
       <ScalarVariable causality="output" name="v_1" valueReference="1">
          <Real/>
       </ScalarVariable>
+      <ScalarVariable causality="output" name="F_1" valueReference="16">
+         <Real/>
+      </ScalarVariable>
       <ScalarVariable causality="output" name="x_2" valueReference="2">
          <Real/>
       </ScalarVariable>
