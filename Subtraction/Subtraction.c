@@ -58,3 +58,8 @@ fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
     logf(fmi2OK, "u1 = %lf, u2 = %lf, y = %lf", _u1, _u2, _y);
     return fmi2OK;
 }
+
+fmi2Status OutputUpdate(fmi2Component component)
+{
+	return fmi2OK;
+}

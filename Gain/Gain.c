@@ -53,7 +53,12 @@ fmi2Status FinishInitialization(fmi2Component component)
 
 fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
 {
-    _y = _K * _u;
     logf(fmi2OK, "u = %lf, y = %lf, K = %lf", _u, _y, _K);
     return fmi2OK;
+}
+
+fmi2Status OutputUpdate(fmi2Component component)
+{
+	_y = _K * _u;
+	return fmi2OK;
 }

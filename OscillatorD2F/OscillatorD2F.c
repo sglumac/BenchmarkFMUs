@@ -144,7 +144,11 @@ fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
     }
     _xThis = _xS;
     _vThis = _vS;
-    _FThis = _ck * _xThis + _dk * _vThis - _ck * _xOther - _dk * _vOther;
     return fmi2OK;
 }
 
+fmi2Status OutputUpdate(fmi2Component component)
+{
+	_FThis = _ck * _xThis + _dk * _vThis - _ck * _xOther - _dk * _vOther;
+	return fmi2OK;
+}

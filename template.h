@@ -289,6 +289,10 @@ fmi2Status fmi2GetReal
     {
         return fmi2Fatal;
     }
+	if (OutputUpdate(component) != fmi2OK)
+	{
+		return fmi2Error;
+	}
     for (i = 0; i < nvr; i++)
     {
         value[i] = r(vr[i],0);

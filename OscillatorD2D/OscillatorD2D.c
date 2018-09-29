@@ -152,3 +152,7 @@ fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
     return fmi2OK;
 }
 
+fmi2Status OutputUpdate(fmi2Component component)
+{
+	return fmi2OK;
+}

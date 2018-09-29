@@ -73,8 +73,13 @@ fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
         _x -= _u(d) * hn / (d + 1);
     }
     _x += _r * h;
-    _y = _KI * _x + _KP * e;
+	_y = _KI * _x + _KP * e;
     logf(fmi2OK, "r = %lf, u = %lf, u0 = %lf,  e = %lf, x = %lf", _r, u, _u(0), e, _x);
     return fmi2OK;
+}
+
+fmi2Status OutputUpdate(fmi2Component component)
+{
+	return fmi2OK;
 }
 
