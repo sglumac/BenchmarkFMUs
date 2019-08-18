@@ -93,6 +93,7 @@ macro(FMU name)
 endmacro()
 
 add_subdirectory(PT1)
+add_subdirectory(PT2)
 add_subdirectory(PI)
 add_subdirectory(OscillatorD2D)
 add_subdirectory(OscillatorF2D)

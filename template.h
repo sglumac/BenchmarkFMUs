@@ -63,6 +63,7 @@ void FreeInternal(fmi2Component component);
 void StartInitialization(fmi2Component component);
 fmi2Status FinishInitialization(fmi2Component component);
 fmi2Status StateUpdate(fmi2Component component, fmi2Real communicationStepSize);
+fmi2Status OutputUpdate(fmi2Component component);
 
 struct Component
 {
