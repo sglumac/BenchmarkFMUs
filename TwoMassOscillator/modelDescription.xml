@@ -57,5 +57,13 @@
          <Real start="2"/>
       </ScalarVariable>
    </ModelVariables>
-   <ModelStructure/>
+   <ModelStructure>
+    <Outputs>
+      <Unknown index="1"/>
+      <Unknown index="2"/>
+      <Unknown index="3"/>
+      <Unknown index="4"/>
+	  <Unknown index="5"/>
+	</Outputs>
+   </ModelStructure>
 </fmiModelDescription>
