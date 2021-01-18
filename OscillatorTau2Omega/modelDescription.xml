@@ -27,5 +27,9 @@
          <Real start="0.1"/>
       </ScalarVariable>
    </ModelVariables>
-   <ModelStructure/>
+  <ModelStructure>
+    <Outputs>
+      <Unknown index="2"/>
+    </Outputs>
+  </ModelStructure>
 </fmiModelDescription>

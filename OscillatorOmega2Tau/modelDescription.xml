@@ -32,9 +32,13 @@
       <ScalarVariable causality="parameter" name="omegaThis0" valueReference="8" variability="fixed">
          <Real start="0.1"/>
       </ScalarVariable>
-	  <ScalarVariable causality="parameter" name="phiOther0" valueReference="9" variability="fixed">
+    <ScalarVariable causality="parameter" name="phiOther0" valueReference="9" variability="fixed">
          <Real start="0.1"/>
       </ScalarVariable>
-   </ModelVariables>
-   <ModelStructure/>
+  </ModelVariables>
+  <ModelStructure>
+    <Outputs>
+      <Unknown index="2"/>
+    </Outputs>
+  </ModelStructure>
 </fmiModelDescription>

@@ -104,7 +104,6 @@ macro(FMU name)
 
 endmacro()
 
-#[[
 add_subdirectory(PT1)
 add_subdirectory(PT2)
 add_subdirectory(PI)
@@ -119,7 +118,6 @@ add_subdirectory(Subtraction)
 add_subdirectory(Zero)
 add_subdirectory(TwoMassOscillator)
 add_subdirectory(ControlLoopPIxPT1)
-]]
 add_subdirectory(TwoMassRotationalOscillator)
 
 macro(CopyFile name)
