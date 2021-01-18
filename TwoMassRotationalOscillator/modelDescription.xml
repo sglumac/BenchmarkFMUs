@@ -17,7 +17,7 @@
       <ScalarVariable causality="output" name="phi_2" valueReference="2">
          <Real/>
       </ScalarVariable>
-      <ScalarVariable causality="output" name="v_2" valueReference="3">
+      <ScalarVariable causality="output" name="omega_2" valueReference="3">
          <Real/>
       </ScalarVariable>
       <ScalarVariable causality="parameter" name="J_1" valueReference="4" variability="fixed">
