@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fmiModelDescription modelName="TwoMassRotationalOscillator" fmiVersion="2.0" guid="{b027788c-cb1a-4908-a704-1abd4d47673e}">
+    <CoSimulation
+        modelIdentifier="TwoMassRotationalOscillator"
+        canHandleVariableCommunicationStepSize="true"
+        canInterpolateInputs="true"/>
+   <ModelVariables>
+      <ScalarVariable causality="output" name="phi_1" valueReference="0">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="omega_1" valueReference="1">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="tau_1" valueReference="16">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="phi_2" valueReference="2">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="v_2" valueReference="3">
+         <Real/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="J_1" valueReference="4" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="c_1" valueReference="5" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="d_1" valueReference="6" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="phi0_1" valueReference="7" variability="fixed">
+         <Real start="0.1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="omega0_1" valueReference="8" variability="fixed">
+         <Real start="0.1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="J_2" valueReference="9" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="c_2" valueReference="10" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="d_2" valueReference="11" variability="fixed">
+         <Real start="2"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="phi0_2" valueReference="12" variability="fixed">
+         <Real start="0.2"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="omega0_2" valueReference="13" variability="fixed">
+         <Real start="0.1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="ck" valueReference="14" variability="fixed">
+         <Real start="1"/>
+      </ScalarVariable>
+      <ScalarVariable causality="parameter" name="dk" valueReference="15" variability="fixed">
+         <Real start="2"/>
+      </ScalarVariable>
+   </ModelVariables>
+   <ModelStructure>
+    <Outputs>
+      <Unknown index="1"/>
+      <Unknown index="2"/>
+      <Unknown index="3"/>
+      <Unknown index="4"/>
+	  <Unknown index="5"/>
+	</Outputs>
+   </ModelStructure>
+</fmiModelDescription>
