@@ -20,10 +20,10 @@
       <ScalarVariable causality="parameter" name="d" valueReference="4" variability="fixed">
          <Real start="1"/>
       </ScalarVariable>
-      <ScalarVariable causality="parameter" name="x0" valueReference="5" variability="fixed">
+      <ScalarVariable causality="parameter" name="phiThis0" valueReference="5" variability="fixed">
          <Real start="0.1"/>
       </ScalarVariable>
-      <ScalarVariable causality="parameter" name="v0" valueReference="6" variability="fixed">
+      <ScalarVariable causality="parameter" name="omegaThis0" valueReference="6" variability="fixed">
          <Real start="0.1"/>
       </ScalarVariable>
    </ModelVariables>

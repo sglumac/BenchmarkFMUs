@@ -124,6 +124,7 @@ fmi2Status FinishInitialization(fmi2Component component)
     N_Vector y = _y;
     _phiThisS = _phiThis0;
     _omegaThisS = _omegaThis0;
+	_omegaThis = _omegaThis0;
     return InitializeIntegrator(component);
 }
 
