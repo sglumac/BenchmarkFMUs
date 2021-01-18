@@ -28,7 +28,7 @@ const fmi2ValueReference ivrs[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 7, 8};
 #define _omegaThis r(8,0)
 #define _phiOther r(9,0)
 
-#define NUMBER_OF_STATES 2
+#define NUMBER_OF_STATES 3
 #define _phiThisS NV_Ith_S(y,0)
 #define _omegaThisS NV_Ith_S(y,1)
 #define _phiOtherS NV_Ith_S(y,2)
@@ -143,6 +143,7 @@ fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
     realtype tReached;
     if (CVode(_cvode, _t + h, _y, &tReached, CV_NORMAL) != CV_SUCCESS)
     {
+		log(fmi2Error, "The integration failed!");
         return fmi2Error;
     }
     _phiThis = _phiThisS;
