@@ -54,12 +54,12 @@ static int f(realtype t, N_Vector y, N_Vector dy, void *user_data)
     fmi2Component component = user_data;
     fmi2Real omegaOther = interp(component, vr_omegaOther, t - _t);
 
-	_dphiOtherS = _omegaOther;
     _dphiS = _omegaThisS;
     _domegaThisS = -(_c + _ck) / _J * _phiThisS;
     _domegaThisS -= (_d + _dk) / _J * _omegaThisS;
     _domegaThisS += _ck / _J * _phiOtherS;
     _domegaThisS += _dk / _J * omegaOther;
+	_dphiOtherS = omegaOther;
 
     return CV_SUCCESS;
 }
@@ -70,8 +70,13 @@ static int Jacobian(long int N, realtype t, N_Vector y, N_Vector fy, DlsMat J, v
 
     Jac(0,0) = 0.;
     Jac(0,1) = 1.;
+	Jac(0,2) = 0.;
     Jac(1,0) = -(_c + _ck) / _J;
     Jac(1,1) = -(_d + _dk) / _J;
+	Jac(1,2) = _ck / _J;
+	Jac(2,0) = 0.;
+    Jac(2,1) = 0.;
+	Jac(2,2) = 0.;
 
     return CV_SUCCESS;
 }
@@ -134,6 +139,7 @@ fmi2Status FinishInitialization(fmi2Component component)
     N_Vector y = _y;
     _phiThisS = _phiThis0;
     _omegaThisS = _omegaThis0;
+	_phiOtherS = _phiOther;
     return InitializeIntegrator(component);
 }
 
