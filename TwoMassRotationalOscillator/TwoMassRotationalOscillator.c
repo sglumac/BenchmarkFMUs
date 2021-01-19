@@ -192,6 +192,8 @@ fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
 
 fmi2Status OutputUpdate(fmi2Component component)
 {
+	
 	_tau_O2T = _ck * _phi_O2T + _dk * _omega_O2T - _ck * _phi_T2O - _dk * _omega_T2O;
+	printf("2M: _ck = %lf, _phi_O2T = %lf, _dk = %lf, _omega_O2T = %lf, _phi_T2O = %lf, _omega_T2O = %lf, tau_O2T = %lf\n", _ck, _phi_O2T, _dk, _omega_O2T, _phi_T2O, _omega_T2O, _tau_O2T); 
 	return fmi2OK;
 }

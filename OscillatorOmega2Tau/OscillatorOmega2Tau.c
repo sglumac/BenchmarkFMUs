@@ -139,7 +139,8 @@ fmi2Status FinishInitialization(fmi2Component component)
     N_Vector y = _y;
     _phiThisS = _phiThis0;
     _omegaThisS = _omegaThis0;
-	_phiOtherS = _phiOther;
+	_phiOtherS = _phiOther0;
+	_phiOther = _phiOther0;
      OutputUpdate(component);
     return InitializeIntegrator(component);
 }
@@ -155,11 +156,13 @@ fmi2Status StateUpdate(fmi2Component component, fmi2Real h)
     }
     _phiThis = _phiThisS;
     _omegaThis = _omegaThisS;
+	_phiOther = _phiOtherS; 
     return fmi2OK;
 }
 
 fmi2Status OutputUpdate(fmi2Component component)
 {
+	printf("O2T: _ck = %lf, _phi_O2T = %lf, _dk = %lf, _omega_O2T = %lf, _phi_T2O = %lf, _omega_T2O = %lf, tau_O2T = %lf\n", _ck, _phiThis, _dk, _omegaThis, _phiOther, _omegaOther, _tauThis); 
 	_tauThis = _ck * _phiThis + _dk * _omegaThis - _ck * _phiOther - _dk * _omegaOther;
 	return fmi2OK;
 }
