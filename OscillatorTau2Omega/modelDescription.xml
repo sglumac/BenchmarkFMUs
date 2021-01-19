@@ -11,7 +11,7 @@
       <ScalarVariable causality="output" name="omegaThis" valueReference="1">
          <Real/>
       </ScalarVariable>
-      <ScalarVariable causality="parameter" name="m" valueReference="2" variability="fixed">
+      <ScalarVariable causality="parameter" name="J" valueReference="2" variability="fixed">
          <Real start="1"/>
       </ScalarVariable>
       <ScalarVariable causality="parameter" name="c" valueReference="3" variability="fixed">

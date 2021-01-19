@@ -13,12 +13,12 @@
 #include <sundials/sundials_types.h>
 
 #define MAX_INPUT_DERIVATIVE_ORDER 10
-#define NUMBER_OF_REALS 6
+#define NUMBER_OF_REALS 7
 #define NUMBER_OF_INTEGERS 0
 #define NUMBER_OF_BOOLEANS 0
 #define NUMBER_OF_STRINGS 0
 
-const fmi2ValueReference ivrs[] = {0, 1, 2, 3, 4, 5, 1, 2};
+const fmi2ValueReference ivrs[] = {0, 1, 2, 3, 4, 5, 1};
 
 #define vr_tauOther 0
 #define _tauOther r(vr_tauOther,0)
@@ -49,10 +49,10 @@ struct Internal
 static int f(realtype t, N_Vector y, N_Vector dy, void *user_data)
 {
     fmi2Component component = user_data;
-    fmi2Real FOther = interp(component, vr_tauOther, t - _t);
+    fmi2Real tauOther = interp(component, vr_tauOther, t - _t);
 
     _dphiThisS = _omegaThisS;
-    _domegaThisS = -_c / _J * _phiThisS - _d / _J * _omegaThisS + 1. / _J * FOther;
+    _domegaThisS = -_c / _J * _phiThisS - _d / _J * _omegaThisS + 1. / _J * tauOther;
 
     return CV_SUCCESS;
 }
@@ -83,8 +83,8 @@ void FreeInternal(fmi2Component component)
 
 fmi2Status InitializeIntegrator(fmi2Component component)
 {
-    realtype reltol = 0.;
-    realtype abstol = 1e-8;
+    realtype reltol = 1e-3;
+    realtype abstol = 1e-3;
     log(fmi2OK, "Hello from InitializeIntegrator!");
     if (CVodeInit(_cvode, f, _t, _y) != CV_SUCCESS)
     {
