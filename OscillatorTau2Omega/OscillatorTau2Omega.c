@@ -83,8 +83,8 @@ void FreeInternal(fmi2Component component)
 
 fmi2Status InitializeIntegrator(fmi2Component component)
 {
-    realtype reltol = 1e-3;
-    realtype abstol = 1e-3;
+    realtype reltol = 0.;
+    realtype abstol = 1e-8;
     log(fmi2OK, "Hello from InitializeIntegrator!");
     if (CVodeInit(_cvode, f, _t, _y) != CV_SUCCESS)
     {
